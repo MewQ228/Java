@@ -1,0 +1,13 @@
+public class Main {
+    public static void main(String[] args) {
+        StringBuffer buf = new StringBuffer();
+        for (int i = 0; i <= 2147483647; i++) { // ВІДЛІК ВІД 0 ДО МАКС ЧИСЛА
+            buf.setLength(0);
+            String res = Integer.toBinaryString(i); // ПЕРЕВОД ЧИСЛА В ДВІЙКОВИЙ КОД
+            String rev = buf.append(res).reverse().toString(); // ПЕРЕВОРОТ ЧИСЛА ЗАДОМ НАПЕРЕД
+            if (res.equals(rev)) { // ЯКЩО ЧИСЛО == ЧИСЛУ ЗАДОМ НАПЕРЕД ВИВЕСТИ ЙОГО
+                System.out.println(res);
+            }
+        }
+    }
+}
